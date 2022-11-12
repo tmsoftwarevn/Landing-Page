@@ -1,18 +1,15 @@
 
 
 import React from "react"
-class MyCompunent extends React.Component {
+import Userinfo from "./Userinfor"
 
-    state = {
-        name: 'Eric',
-        address: 'Hoi dan it',
-        age: 26
-    }
+class MyCompunent extends React.Component {
 
     render() {
         return (
             <div>
-                My name is {this.state.name} and i'm from {this.state.address}
+
+                <Userinfo />
 
             </div>
         );
