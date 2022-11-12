@@ -7,7 +7,7 @@ import Userinfo from "./Userinfor"
 class MyCompunent extends React.Component {
     state = {
         listUser: [
-            { id: 1, name: "hoi dan it", age: "30" },
+            { id: 1, name: "hoi dan it", age: "16" },
             { id: 2, name: "mr john woh", age: "24" },
             { id: 3, name: "ms thena", age: "45" }
         ]
