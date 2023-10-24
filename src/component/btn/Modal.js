@@ -1,8 +1,8 @@
 import { useRef, useState } from "react";
 import p2 from "../../image/p2.jpg";
 import vongquay from "../../image/vongquay.png";
-import "./Wheel.scss";
-const Wheel = (props) => {
+import "./Modal.scss";
+const Modal = (props) => {
   const { handleQuay, getResult } = props;
   const [isSpinning, setSpinning] = useState(false);
   const [result, setResult] = useState(null);
@@ -75,14 +75,14 @@ const Wheel = (props) => {
   return (
     <>
       <div className="vongquay-container">
-        <img src={p2} alt="anh" width={"960px"} height={"540px"} />
+        <img src={p2} alt="anh" width={"800px"} height={"450px"} />
         <div id="arrow"></div>
         <div className="vongquay">
           <img
             src={vongquay}
             alt="vong quay"
-            width={"350px"}
-            height={"350px"}
+            width={"300px"}
+            height={"300px"}
             ref={wheelRef}
           />
           <div style={{ height: "10px" }}></div>
@@ -95,4 +95,4 @@ const Wheel = (props) => {
   );
 };
 
-export default Wheel;
+export default Modal;

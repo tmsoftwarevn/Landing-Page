@@ -1,0 +1,33 @@
+.vongquay-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    #arrow {
+        position: absolute;
+        top: 15.25%;
+        right: 26.25%;
+        z-index: 1;
+        border-top: 40px solid #a73b96;
+        border-left: 20px solid transparent;
+        border-right: 20px solid transparent;
+    }
+    .vongquay {
+        position: absolute;
+        right: 10%;
+        top: 15%;
+        .btXoay {
+            position: absolute;
+            width: 150px;
+            text-align: center;
+            left: 27%;
+            padding: 10px 20px;
+            background-color: #fd79a8;
+            color: white;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+            font-size: 20px;
+        }
+    }
+}

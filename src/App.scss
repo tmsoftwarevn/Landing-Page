@@ -19,40 +19,51 @@ img {
 
 .container {
   position: relative;
-  z-index: 5;
+  z-index: 1;
   .p {
     display: flex;
     align-items: center;
     justify-content: center;
   }
-  .vongquay-container {
+  // .vongquay-container {
+  //   position: relative;
+  //   #arrow {
+  //     position: absolute;
+  //     top: 15%;
+  //     right: 21.25%;
+  //     z-index: 1;
+  //     border-top: 40px solid #a73b96;
+  //     border-left: 20px solid transparent;
+  //     border-right: 20px solid transparent;
+  //   }
+  //   .vongquay {
+  //     position: absolute;
+  //     right: 5%;
+  //     top: 15%;
+  //     .btXoay {
+  //       position: absolute;
+  //       width: 150px;
+  //       text-align: center;
+  //       left: 27%;
+  //       padding: 10px 20px;
+  //       background-color: #fd79a8;
+  //       color: white;
+  //       border: none;
+  //       cursor: pointer;
+  //       border-radius: 5px;
+  //       font-size: 20px;
+  //     }
+  //   }
+  // }
+  .form {
     position: relative;
-    #arrow {
+    .info {
       position: absolute;
-      top: 15%;
-      right: 21.25%;
-      z-index: 1;
-      border-top: 40px solid #a73b96;
-      border-left: 20px solid transparent;
-      border-right: 20px solid transparent;
+      margin-left: 400px;
+      margin-top: 200px;
     }
-    .vongquay {
-      position: absolute;
-      right: 5%;
-      top: 15%;
-      .btXoay {
-        position: absolute;
-        width: 150px;
-        text-align: center;
-        left: 27%;
-        padding: 10px 20px;
-        background-color: #fd79a8;
-        color: white;
-        border: none;
-        cursor: pointer;
-        border-radius: 5px;
-        font-size: 20px;
-      }
+    .btn-info {
+      margin-left: 50px;
     }
   }
 }

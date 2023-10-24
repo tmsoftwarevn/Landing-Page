@@ -1,7 +1,10 @@
 import { Button, Divider, Form, Input } from "antd";
+import "./form.scss";
 const FormUser = () => {
   const [form] = Form.useForm();
-  const onFinish = (values) => {};
+  const onFinish = (values) => {
+    console.log("vvvvvv", values);
+  };
   return (
     <>
       <Form name="basic" onFinish={onFinish} autoComplete="off" form={form}>
@@ -16,7 +19,7 @@ const FormUser = () => {
             },
           ]}
         >
-          <Input />
+          <Input placeholder="Họ và tên" />
         </Form.Item>
 
         <Form.Item
@@ -30,11 +33,12 @@ const FormUser = () => {
             },
           ]}
         >
-          <Input />
+          <Input placeholder="Số điện thoại" style={{ color: "black" }} />
         </Form.Item>
         <Form.Item>
-          <Button>Lưu</Button>
-          <Button>Hủy</Button>
+          <Button className="btn-info" onClick={() => form.submit()}>
+            Xác nhận
+          </Button>
         </Form.Item>
       </Form>
     </>

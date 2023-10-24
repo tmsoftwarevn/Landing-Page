@@ -7,4 +7,72 @@
         height: 100vh;
         background-color: #ccc;
     }
+    .content {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 5;
+        .btn-cancel {
+            position: absolute;
+            font-size: 50px;
+            top: 10px;
+            right: 4px;
+            color: rgb(225, 220, 220);
+            cursor: pointer;
+        }
+        .gift {
+            position: absolute;
+            top: 30%;
+            left: 60%;
+            transform: translate(-50%, -50%);
+            border-radius: 20px;
+            background-color: #e1b12c;
+            padding: 20px;
+            p {
+                color: white;
+                font-size: 25px;
+                margin-bottom: 10px;
+            }
+            span {
+                color: blue;
+                font-size: 20px;
+                text-transform: uppercase;
+            }
+        }
+        .info {
+            p {
+                color: #e67e22;
+                font-size: 18px;
+                text-transform: capitalize;
+                margin-bottom: 10px;
+                //animation: text 2s forwards infinite ease;
+            }
+            position: absolute;
+            top: 70%;
+            left: 60%;
+            transform: translate(-50%, -50%);
+        }
+        .call {
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translate(-50%, -50%);
+
+            p {
+                text-transform: capitalize;
+                font-size: 18px;
+                color: #e1b12c;
+                animation: text 2s forwards infinite ease;
+            }
+        }
+    }
+}
+@keyframes text {
+    from {
+        transform: scale(1);
+    }
+    to {
+        transform: scale(1.2);
+    }
 }
