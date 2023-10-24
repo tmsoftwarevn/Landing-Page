@@ -1,38 +1,53 @@
-import logo from './logo.svg';
-import './App.scss';
-import { useDispatch, useSelector } from 'react-redux';
-import { increaseCounter, decreaseCounter } from './redux/action/counterAction';
-import MyCompunent from './components/MyComponent';
-import React from 'react';
-class App extends React.Component {
-  render() {
-    return (
-      <div className='app-container'>
-        {/* Hello World voi Eric ; Hoi dan it */}
-        <MyCompunent></MyCompunent>
+import React, { useEffect, useState } from "react";
+import "./App.scss";
+import p1 from "./image/p1.jpg";
+import p2 from "./image/p2.jpg";
+import p3 from "./image/p3.jpg";
+import p4 from "./image/p4.jpg";
+import p5 from "./image/p5.jpg";
+import p6 from "./image/p6.png";
+import p7 from "./image/p7.jpg";
+import p8 from "./image/p8.jpg";
+
+import Wheel from "./component/lucky wheel/Wheel";
+import Result from "./component/result/Result";
+const App = () => {
+  const [isModal, setIsModal] = useState(false);
+  const handleQuay = (check) => {
+    setIsModal(check);
+  };
+
+  return (
+    <>
+      <div className="container">
+        <div className="p">
+          <img src={p1} alt="anh" width={"960px"} height={"920px"} />
+        </div>
+        <div className="p">
+          <Wheel handleQuay={handleQuay} />
+        </div>
+        <div className="p">
+          <img src={p3} alt="anh" width={"960px"} height={"72px"} />
+        </div>
+        <div className="p">
+          <img src={p4} alt="anh" width={"960px"} height={"857px"} />
+        </div>
+        <div className="p">
+          <img src={p5} alt="anh" width={"960px"} height={"168px"} />
+        </div>
+        <div className="p">
+          <img src={p6} alt="anh" width={"960px"} height={"545px"} />
+        </div>
+        <div className="p">
+          <img src={p7} alt="anh" width={"960px"} height={"743px"} />
+        </div>
+        <div className="p">
+          <img src={p8} alt="anh" width={"960px"} height={"528px"} />
+        </div>
       </div>
-    )
-  }
-}
+      {isModal && <Result />}
+    </>
+  );
+};
 
-// const App = () => {
-//   const count = useSelector(state => state.counter.count);
-//   const dispatch = useDispatch();
-
-//   return (
-
-//     <div className="App">
-//       <header className="App-header">
-//         <img src={logo} className="App-logo" alt="logo" />
-//         <p>
-//           lap trinh reactjs
-//         </p>
-//         <div>Count = {count}</div>
-//         <button onClick={() => dispatch(increaseCounter())}>Increase</button>
-//         <button onClick={() => dispatch(decreaseCounter())}>Decrease</button>
-//       </header>
-//     </div>
-
-//   );
-// }
 export default App;

@@ -1,55 +1,58 @@
-body {
-  padding: 20px;
+input,
+button {
+  border: none;
+  outline: none;
+}
 
+* {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  box-sizing: border-box;
+}
+ul,
+li {
+  list-style: none;
+}
+img {
+  display: block;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
-}
-
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+.container {
+  position: relative;
+  z-index: 5;
+  .p {
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-
-  to {
-    transform: rotate(360deg);
+  .vongquay-container {
+    position: relative;
+    #arrow {
+      position: absolute;
+      top: 15%;
+      right: 21.25%;
+      z-index: 1;
+      border-top: 40px solid #a73b96;
+      border-left: 20px solid transparent;
+      border-right: 20px solid transparent;
+    }
+    .vongquay {
+      position: absolute;
+      right: 5%;
+      top: 15%;
+      .btXoay {
+        position: absolute;
+        width: 150px;
+        text-align: center;
+        left: 27%;
+        padding: 10px 20px;
+        background-color: #fd79a8;
+        color: white;
+        border: none;
+        cursor: pointer;
+        border-radius: 5px;
+        font-size: 20px;
+      }
+    }
   }
 }
