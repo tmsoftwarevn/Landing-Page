@@ -1,9 +1,59 @@
 @import '../css/media.scss';
 @import '../css/reset.scss';
 
-.btn-info {
-    margin-left: 100px;
+.form {
     @include xs {
-        margin: 0;
+        width: 100%;
+    }
+    @include lg {
+        width: 150%;
+    }
+    .name {
+        @include xs {
+            display: block;
+            padding: 2%;
+            width: 100%;
+            border-radius: 2px;
+            margin-bottom: 5px;
+        }
+        @include lg {
+            display: block;
+            padding: 2%;
+            width: 100%;
+            border-radius: 2px;
+            margin-bottom: 5px;
+        }
+    }
+    .phone {
+        @include xs {
+            display: block;
+            padding: 2%;
+            width: 100%;
+            border-radius: 2px;
+        }
+        @include lg {
+            display: block;
+            padding: 2%;
+            width: 100%;
+            border-radius: 2px;
+        }
+    }
+    .btn-ok {
+        border-radius: 5px;
+        color: white;
+        background-color: #e1b12c;
+        width: fit-content;
+        cursor: pointer;
+        &:hover {
+            background-color: #c59513;
+        }
+        @include xs {
+            margin-top: 3%;
+            padding: 5%;
+        }
+        @include lg {
+            margin-top: 3%;
+            padding: 3%;
+        }
     }
 }

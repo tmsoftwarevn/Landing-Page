@@ -36,7 +36,7 @@ const ButtonWheel = forwardRef((props, ref) => {
           handleBtn();
         }}
       >
-        <img src={anhbutton} alt="anh" width={"60px"} height={"60px"} />
+        <img src={anhbutton} alt="anh" className="anh-btn" />
       </div>
       {isWheel && (
         <>

@@ -74,11 +74,19 @@
   .form {
     position: relative;
     .info {
-      position: absolute;
-      margin-left: 400px;
-      margin-top: 200px;
+      // position: absolute;
+      // margin-left: 400px;
+      // margin-top: 200px;
       @include xs {
-        margin: 0;
+        position: absolute;
+        right: 10%;
+        top: 53%;
+        width: 30%;
+      }
+      @include lg {
+        position: absolute;
+        margin-left: 400px;
+        margin-top: 200px;
       }
     }
     .btn-info {

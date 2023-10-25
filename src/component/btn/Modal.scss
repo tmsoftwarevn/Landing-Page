@@ -9,7 +9,7 @@
 
     .anh-modal {
         @include xs {
-            width: 100%;
+            width: 80vw;
             height: 100%;
         }
         @include lg {
@@ -17,23 +17,39 @@
             height: 450px;
         }
     }
-    #arrow-modal {
-        position: absolute;
-        top: 15.25%;
-        right: 26.25%;
-        z-index: 1;
-        border-top: 40px solid #a73b96;
-        border-left: 20px solid transparent;
-        border-right: 20px solid transparent;
-    }
+
     .vongquay-modal {
-        position: absolute;
-        right: 10%;
-        top: 15%;
+        // position: absolute;
+        // right: 10%;
+        // top: 15%;
+        @include xs {
+            position: absolute;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-left: 50%;
+        }
+        #arrow-modal {
+            // position: absolute;
+            // top: 15.25%;
+            // right: 26.25%;
+            // z-index: 1;
+            // border-top: 40px solid #a73b96;
+            // border-left: 20px solid transparent;
+            // border-right: 20px solid transparent;
+            @include xs {
+                position: absolute;
+                top: 1%;
+                z-index: 1;
+                border-top: 30px solid #a73b96;
+                border-left: 15px solid transparent;
+                border-right: 15px solid transparent;
+            }
+        }
         .anh-vongquay-modal {
             @include xs {
-                width: 100%;
-                height: 100%;
+                width: 80%;
+                height: 50%;
             }
             @include lg {
                 width: 300px;
@@ -41,17 +57,28 @@
             }
         }
         .btXoay {
-            position: absolute;
-            width: 150px;
-            text-align: center;
-            left: 27%;
-            padding: 10px 20px;
-            background-color: #fd79a8;
-            color: white;
-            border: none;
-            cursor: pointer;
-            border-radius: 5px;
-            font-size: 20px;
+            // position: absolute;
+            // width: 150px;
+            // text-align: center;
+            // left: 27%;
+            // padding: 10px 20px;
+            // background-color: #fd79a8;
+            // color: white;
+            // border: none;
+            // cursor: pointer;
+            // border-radius: 5px;
+            // font-size: 20px;
+            @include xs {
+                position: absolute;
+                text-align: center;
+                background-color: #fd79a8;
+                color: white;
+                border: none;
+                cursor: pointer;
+                border-radius: 5px;
+                padding: 1%;
+                bottom: -20%;
+            }
         }
     }
     .btn-cancel {

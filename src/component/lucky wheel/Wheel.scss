@@ -15,35 +15,40 @@
             height: 540px;
         }
     }
-    #arrow {
-        // position: absolute;
-        // top: 15.25%;
-        // right: 30.25%;
-        // z-index: 1;
-        // border-top: 40px solid #a73b96;
-        // border-left: 20px solid transparent;
-        // border-right: 20px solid transparent;
-        @include xs {
-            position: absolute;
-            z-index: 1;
-            top: -1%;
-            // border-top: 30px solid #a73b96;
-            // border-left: 15px solid transparent;
-            // border-right: 15px solid transparent;
-            border-top: 30px solid #a73b96;
-            border-left: 15px solid transparent;
-            border-right: 15px solid transparent;
-        }
-    }
+
     .vongquay {
-        position: absolute;
         display: flex;
         align-items: center;
         justify-content: center;
-        margin-left: 26%;
+        position: absolute;
+        @include xs {
+            margin-left: 50%;
+        }
+        @include lg {
+            margin-left: 26%;
+        }
+        #arrow {
+            @include xs {
+                position: absolute;
+                z-index: 1;
+                top: 0;
+                margin-left: 5px;
+                border-top: 30px solid #a73b96;
+                border-left: 15px solid transparent;
+                border-right: 15px solid transparent;
+            }
+            @include lg {
+                position: absolute;
+                top: 1%;
+                z-index: 1;
+                border-top: 40px solid #a73b96;
+                border-left: 20px solid transparent;
+                border-right: 20px solid transparent;
+            }
+        }
         .anh_vongquay {
             @include xs {
-                width: 50%;
+                width: 80%;
                 height: 50%;
             }
             @include lg {
@@ -52,17 +57,6 @@
             }
         }
         .btXoay {
-            // position: absolute;
-            // width: 150px;
-            // text-align: center;
-            // left: 27%;
-            // padding: 10px 20px;
-            // background-color: #fd79a8;
-            // color: white;
-            // border: none;
-            // cursor: pointer;
-            // border-radius: 5px;
-            // font-size: 20px;
             @include xs {
                 position: absolute;
                 text-align: center;
@@ -73,6 +67,24 @@
                 border-radius: 5px;
                 padding: 1%;
                 bottom: -20%;
+                &:hover {
+                    background-color: #e419c6;
+                }
+            }
+            @include lg {
+                position: absolute;
+                text-align: center;
+                padding: 10px 20px;
+                background-color: #fd79a8;
+                color: white;
+                border: none;
+                cursor: pointer;
+                border-radius: 5px;
+                font-size: 20px;
+                bottom: -15%;
+                &:hover {
+                    background-color: #e419c6;
+                }
             }
         }
     }

@@ -1,47 +1,42 @@
-import { Button, Divider, Form, Input } from "antd";
 import "./form.scss";
+import { useRef, useState } from "react";
 const FormUser = () => {
-  const [form] = Form.useForm();
-  const onFinish = (values) => {
-    console.log("vvvvvv", values);
-  };
-  return (
-    <>
-      <Form name="basic" onFinish={onFinish} autoComplete="off" form={form}>
-        <Form.Item
-          labelCol={{ span: 12 }}
-          name="Họ và tên"
-          requiredMark={"optional"} // off star form
-          rules={[
-            {
-              required: true,
-              message: "Hãy nhập họ và tên",
-            },
-          ]}
-        >
-          <Input placeholder="Họ và tên" />
-        </Form.Item>
+  const [name, setName] = useState("");
+  const [phone, setPhone] = useState("");
+  const refName = useRef(null);
+  const refPhone = useRef(null);
 
-        <Form.Item
-          labelCol={{ span: 12 }}
-          name="Số điện thoại"
-          requiredMark={"optional"}
-          rules={[
-            {
-              required: true,
-              message: "Hãy nhập số điện thoại",
-            },
-          ]}
-        >
-          <Input placeholder="Số điện thoại" style={{ color: "black" }} />
-        </Form.Item>
-        <Form.Item>
-          <Button className="btn-info" onClick={() => form.submit()}>
-            Xác nhận
-          </Button>
-        </Form.Item>
-      </Form>
-    </>
+  const handleSetName = (e) => {
+    setName(e.target.value);
+  };
+  const handleSetPhone = (e) => {
+    setPhone(e.target.value);
+  };
+  const checkForm = () => {};
+  return (
+    <div className="form">
+      <input
+        placeholder="Họ và tên"
+        className="name"
+        ref={refName}
+        onChange={(e) => {
+          handleSetName(e);
+        }}
+        // style={{ border: "1px solid red" }}
+      ></input>
+
+      <input
+        placeholder="Số điện thoại"
+        className="phone"
+        ref={refPhone}
+        onChange={(e) => {
+          handleSetPhone(e);
+        }}
+      ></input>
+      <div className="btn-ok" onClick={checkForm}>
+        Xác Nhận
+      </div>
+    </div>
   );
 };
 

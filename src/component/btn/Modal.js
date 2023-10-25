@@ -78,7 +78,11 @@ const Modal = (props) => {
     document.addEventListener("click", handleClickOutside, true);
   }, []);
   const handleClickOutside = (e) => {
-    if (!refOutside.current.contains(e.target)) {
+    if (
+      refOutside &&
+      refOutside.current &&
+      !refOutside.current.contains(e.target)
+    ) {
       resetModalWheel();
       handleSetModalButton(false);
     }
@@ -94,8 +98,9 @@ const Modal = (props) => {
           // height={"450px"}
           className="anh-modal"
         />
-        <div id="arrow-modal"></div>
+
         <div className="vongquay-modal">
+          <div id="arrow-modal"></div>
           <img
             src={vongquay}
             alt="vong quay"

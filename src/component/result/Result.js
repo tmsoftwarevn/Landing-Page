@@ -29,16 +29,21 @@ const Result = (props) => {
           <MdOutlineCancel />
         </div>
         <div className="gift">
-          <p>Chúc mừng bạn đã trúng phần quà:</p>
-          <span>{result}</span>
+          <p>
+            Chúc mừng bạn đã trúng phần quà: <span>{result}</span>
+          </p>
+          {/* <span>{result}</span> */}
         </div>
         <div className="info">
           <p>Để lại thông tin nhận ngay quà xịn</p>
           <FormUser />
         </div>
         <div className="call">
-          <p>bên cửa hàng sẽ gọi xác nhận thông tin</p>
-          <p>anh chị nhớ nghe máy để nhận ưu đãi nhé</p>
+          <p>
+            bên cửa hàng sẽ gọi xác nhận thông tin. chị nhớ nghe máy để nhận ưu
+            đãi nhé
+          </p>
+          {/* <p>chị nhớ nghe máy để nhận ưu đãi nhé</p> */}
         </div>
       </div>
     </div>

@@ -78,8 +78,6 @@ const Wheel = (props) => {
         <img
           src={p2}
           alt="anh"
-          // width={"960px"}
-          // height={"540px"}
           className="anh_2"
         />
 
@@ -88,8 +86,7 @@ const Wheel = (props) => {
           <img
             src={vongquay}
             alt="vong quay"
-            // width={"350px"}
-            // height={"350px"}
+            
             ref={wheelRef}
             className="anh_vongquay"
           />
