@@ -1,15 +1,18 @@
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import p2 from "../../image/p2.jpg";
 import vongquay from "../../image/vongquay.png";
 import "./Modal.scss";
+import { MdOutlineCancel } from "react-icons/md";
 const Modal = (props) => {
-  const { handleQuay, getResult } = props;
+  const { handleQuay, getResult, resetModalWheel, handleSetModalButton } =
+    props;
   const [isSpinning, setSpinning] = useState(false);
   const [result, setResult] = useState(null);
   const [valueNoiDung, setValueNoiDung] = useState("");
   const wheelRef = useRef(null);
   const [isOpen, setIsOpen] = useState(false);
   const [isOpenThongBao, setIsThongBao] = useState(false);
+  const refOutside = useRef(null);
 
   const sliceSize = 360 / 8;
   const values = [
@@ -71,24 +74,50 @@ const Modal = (props) => {
       setIsThongBao(true);
     }
   };
+  useEffect(() => {
+    document.addEventListener("click", handleClickOutside, true);
+  }, []);
+  const handleClickOutside = (e) => {
+    if (!refOutside.current.contains(e.target)) {
+      resetModalWheel();
+      handleSetModalButton(false);
+    }
+  };
 
   return (
     <>
-      <div className="vongquay-container">
-        <img src={p2} alt="anh" width={"800px"} height={"450px"} />
-        <div id="arrow"></div>
-        <div className="vongquay">
+      <div className="modal-quay" ref={refOutside}>
+        <img
+          src={p2}
+          alt="anh"
+          // width={"800px"}
+          // height={"450px"}
+          className="anh-modal"
+        />
+        <div id="arrow-modal"></div>
+        <div className="vongquay-modal">
           <img
             src={vongquay}
             alt="vong quay"
-            width={"300px"}
-            height={"300px"}
+            // width={"300px"}
+            // height={"300px"}
             ref={wheelRef}
+            className="anh-vongquay-modal"
           />
+
           <div style={{ height: "10px" }}></div>
           <div className="btXoay" onClick={() => spinWheel()}>
             Quay
           </div>
+        </div>
+        <div
+          className="btn-cancel"
+          onClick={() => {
+            resetModalWheel();
+            handleSetModalButton(false);
+          }}
+        >
+          <MdOutlineCancel />
         </div>
       </div>
     </>

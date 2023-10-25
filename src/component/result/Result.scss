@@ -1,3 +1,5 @@
+@import '../css/media.scss';
+@import '../css/reset.scss';
 .modal {
     .blur {
         position: fixed;
@@ -8,50 +10,105 @@
         background-color: #ccc;
     }
     .content {
-        position: fixed;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        z-index: 5;
+        //position: fixed;
+        // top: 50%;
+        // left: 50%;
+        // transform: translate(-50%, -50%);
+        //z-index: 10;
+        @include xs {
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 10;
+            width: 100%;
+            height: 100%;
+        }
+        @include lg {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 10;
+        }
+        .anh-ketqua {
+            @include xs {
+                width: 100%;
+                height: 100%;
+            }
+            @include lg {
+                width: 836px;
+                height: 490px;
+            }
+        }
         .btn-cancel {
-            position: absolute;
-            font-size: 50px;
-            top: 10px;
-            right: 4px;
-            color: rgb(225, 220, 220);
-            cursor: pointer;
+            @include xs {
+                position: absolute;
+                top: 5px;
+                right: 1px;
+                font-size: 40px;
+                color: rgb(225, 220, 220);
+                cursor: pointer;
+            }
+            @include lg {
+                position: absolute;
+                font-size: 50px;
+                top: 10px;
+                right: 4px;
+                color: rgb(225, 220, 220);
+                cursor: pointer;
+            }
         }
         .gift {
-            position: absolute;
-            top: 30%;
-            left: 60%;
-            transform: translate(-50%, -50%);
-            border-radius: 20px;
-            background-color: #e1b12c;
-            padding: 20px;
+            // position: absolute;
+            // top: 30%;
+            // left: 60%;
+            // transform: translate(-50%, -50%);
+            // border-radius: 20px;
+            // background-color: #e1b12c;
+            // padding: 20px;
+            @include xs {
+                position: absolute;
+                top: 20%;
+                left: 60%;
+                transform: translate(-50%, -50%);
+                border-radius: 20px;
+                background-color: #e1b12c;
+                padding: 10px;
+            }
             p {
-                color: white;
-                font-size: 25px;
-                margin-bottom: 10px;
+                // color: white;
+                // font-size: 25px;
+                // margin-bottom: 10px;
+                @include xs {
+                    color: white;
+                }
             }
             span {
-                color: blue;
-                font-size: 20px;
-                text-transform: uppercase;
+                // color: blue;
+                // font-size: 20px;
+                // text-transform: uppercase;
+                @include xs {
+                    color: blue;
+                    text-transform: uppercase;
+                }
             }
         }
         .info {
             p {
-                color: #e67e22;
-                font-size: 18px;
-                text-transform: capitalize;
-                margin-bottom: 10px;
-                //animation: text 2s forwards infinite ease;
+                // color: #e67e22;
+                // font-size: 18px;
+                // text-transform: capitalize;
+                // margin-bottom: 10px;
+                @include xs {
+                    display: none;
+                }
             }
             position: absolute;
             top: 70%;
             left: 60%;
             transform: translate(-50%, -50%);
+            @include xs {
+            }
         }
         .call {
             position: absolute;

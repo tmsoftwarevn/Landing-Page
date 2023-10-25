@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import "./App.scss";
 import p1 from "./image/p1.jpg";
 import p2 from "./image/p2.jpg";
@@ -16,50 +16,110 @@ import ButtonWheel from "./component/btn/ButtonWheel";
 const App = () => {
   const [isModal, setIsModal] = useState(false);
   const [result, setResult] = useState("");
-
+  const refModalButton = useRef();
+  const [onModalButton, setOnModalButton] = useState(false);
   const handleQuay = (check) => {
     setIsModal(check);
   };
+  const handleSetModalButton = (b) => {
+    setOnModalButton(b); // nhận biết khi modal được bật lên
+  };
+
   const getResult = (r) => {
     setResult(r);
   };
-
+  const hanleOffModalButton = () => {
+    refModalButton.current.offModalButton(); // ẩn modal click button
+  };
   return (
     <>
-      <div className="container">
+      <div
+        className="container"
+        style={
+          isModal || onModalButton
+            ? { pointerEvents: "none", opacity: "0.5" }
+            : {}
+        }
+      >
         <div className="p">
-          <img src={p1} alt="anh" width={"960px"} height={"920px"} />
+          <img
+            src={p1}
+            alt="anh"
+            // width={"960px"}
+            // height={"920px"}
+            className="anh_1"
+          />
         </div>
-        {/* <div className="p">
-          <Wheel handleQuay={handleQuay} getResult={getResult} />
-        </div> */}
+
         <div>
           <Wheel handleQuay={handleQuay} getResult={getResult} />
         </div>
         <div className="p">
-          <img src={p3} alt="anh" width={"960px"} height={"72px"} />
+          <img
+            src={p3}
+            alt="anh"
+            // width={"960px"}
+            // height={"72px"}
+            className="anh_3"
+          />
         </div>
         {/* <div className="p">
           <img src={p4} alt="anh" width={"960px"} height={"857px"} />
         </div> */}
         <div className="p">
-          <img src={p5} alt="anh" width={"960px"} height={"168px"} />
+          <img
+            src={p5}
+            alt="anh"
+            // width={"960px"}
+            // height={"168px"}
+            className="anh_5"
+          />
         </div>
         <div className="p">
-          <img src={p6} alt="anh" width={"960px"} height={"545px"} />
+          <img
+            src={p6}
+            alt="anh"
+            // width={"960px"}
+            // height={"545px"}
+            className="anh_6"
+          />
         </div>
         <div className="p">
-          <img src={p7} alt="anh" width={"960px"} height={"743px"} />
+          <img
+            src={p7}
+            alt="anh"
+            // width={"960px"}
+            // height={"743px"}
+            className="anh_7"
+          />
         </div>
         <div className="p form">
-          <img src={p8} alt="anh" width={"960px"} height={"528px"} />
+          <img
+            src={p8}
+            alt="anh"
+            // width={"960px"}
+            // height={"528px"}
+            className="anh_8"
+          />
           <div className="info">
             <FormUser />
           </div>
         </div>
       </div>
-      <ButtonWheel />
-      {isModal && <Result handleQuay={handleQuay} result={result} />}
+      <ButtonWheel
+        handleQuay={handleQuay}
+        handleSetModalButton={handleSetModalButton}
+        getResult={getResult}
+        ref={refModalButton}
+      />
+      {isModal && (
+        <Result
+          handleQuay={handleQuay}
+          result={result}
+          hanleOffModalButton={hanleOffModalButton}
+          handleSetModalButton={handleSetModalButton}
+        />
+      )}
     </>
   );
 };

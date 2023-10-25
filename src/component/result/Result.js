@@ -4,17 +4,26 @@ import { useEffect, useState } from "react";
 import gift from "../../image/ketqua.jpg";
 import { MdOutlineCancel } from "react-icons/md";
 const Result = (props) => {
-  const { handleQuay, result } = props;
+  const { handleQuay, result, hanleOffModalButton, handleSetModalButton } =
+    props;
 
   return (
     <div className="modal">
       <div className="blur"></div>
       <div className="content">
-        <img src={gift} alt="anh" width={"836px"} height={"490px"} />
+        <img
+          src={gift}
+          alt="anh"
+          // width={"836px"}
+          // height={"490px"}
+          className="anh-ketqua"
+        />
         <div
           className="btn-cancel"
           onClick={() => {
             handleQuay(false);
+            hanleOffModalButton();
+            handleSetModalButton(false);
           }}
         >
           <MdOutlineCancel />

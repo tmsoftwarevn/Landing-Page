@@ -1,3 +1,9 @@
+@import '../css/media.scss';
+@import '../css/reset.scss';
+
 .btn-info {
     margin-left: 100px;
+    @include xs {
+        margin: 0;
+    }
 }

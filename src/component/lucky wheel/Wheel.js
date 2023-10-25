@@ -75,15 +75,23 @@ const Wheel = (props) => {
   return (
     <>
       <div className="vongquay-container">
-        <img src={p2} alt="anh" width={"960px"} height={"540px"} />
-        <div id="arrow"></div>
+        <img
+          src={p2}
+          alt="anh"
+          // width={"960px"}
+          // height={"540px"}
+          className="anh_2"
+        />
+
         <div className="vongquay">
+          <div id="arrow"></div>
           <img
             src={vongquay}
             alt="vong quay"
-            width={"350px"}
-            height={"350px"}
+            // width={"350px"}
+            // height={"350px"}
             ref={wheelRef}
+            className="anh_vongquay"
           />
           <div style={{ height: "10px" }}></div>
           <div className="btXoay" onClick={() => spinWheel()}>
