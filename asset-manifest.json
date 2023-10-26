@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/Landing-Page/static/css/main.ee53a6f2.css",
+    "main.css": "/Landing-Page/static/css/main.8992c6ad.css",
     "main.js": "/Landing-Page/static/js/main.054e6807.js",
     "static/js/787.174a0e6e.chunk.js": "/Landing-Page/static/js/787.174a0e6e.chunk.js",
     "static/media/p6.png": "/Landing-Page/static/media/p6.327df9d4b288137a7e82.png",
@@ -15,12 +15,12 @@
     "static/media/ketqua.jpg": "/Landing-Page/static/media/ketqua.8e5722fc724d35d221f6.jpg",
     "static/media/quay_ngay.png": "/Landing-Page/static/media/quay_ngay.de9815ffe434d0f959b6.png",
     "index.html": "/Landing-Page/index.html",
-    "main.ee53a6f2.css.map": "/Landing-Page/static/css/main.ee53a6f2.css.map",
+    "main.8992c6ad.css.map": "/Landing-Page/static/css/main.8992c6ad.css.map",
     "main.054e6807.js.map": "/Landing-Page/static/js/main.054e6807.js.map",
     "787.174a0e6e.chunk.js.map": "/Landing-Page/static/js/787.174a0e6e.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.ee53a6f2.css",
+    "static/css/main.8992c6ad.css",
     "static/js/main.054e6807.js"
   ]
 }
