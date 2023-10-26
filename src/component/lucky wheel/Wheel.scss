@@ -39,7 +39,7 @@
                 position: absolute;
                 z-index: 1;
                 top: 0;
-                margin-left: 5px;
+                margin-left: -20%;
                 border-top: 30px solid #a73b96;
                 border-left: 15px solid transparent;
                 border-right: 15px solid transparent;
@@ -63,8 +63,9 @@
         }
         .anh_vongquay {
             @include xs {
-                width: 80%;
-                height: 50%;
+                width: 110%;
+                height: 100%;
+                margin-right: 20%;
             }
             @include sm {
                 width: 80%;
@@ -84,8 +85,9 @@
             cursor: pointer;
             border-radius: 5px;
             @include xs {
-                padding: 1%;
-                bottom: -20%;
+                padding: 2%;
+                bottom: -10%;
+                margin-right: 20%;
                 &:hover {
                     background-color: #e419c6;
                 }
