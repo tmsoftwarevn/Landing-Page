@@ -10,18 +10,23 @@
         background-color: #ccc;
     }
     .content {
-        //position: fixed;
-        // top: 50%;
-        // left: 50%;
-        // transform: translate(-50%, -50%);
-        //z-index: 10;
         @include xs {
             position: fixed;
-            top: 0;
-            left: 0;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
             z-index: 10;
-            width: 100%;
-            height: 100%;
+            width: 80%;
+            height: 80%;
+        }
+        @include sm {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 10;
+            width: 80%;
+            height: 80%;
         }
         @include lg {
             position: fixed;
@@ -32,6 +37,10 @@
         }
         .anh-ketqua {
             @include xs {
+                width: 100%;
+                height: 100%;
+            }
+            @include sm {
                 width: 100%;
                 height: 100%;
             }
@@ -49,6 +58,14 @@
                 color: rgb(225, 220, 220);
                 cursor: pointer;
             }
+            @include sm {
+                position: absolute;
+                top: 5px;
+                right: 1px;
+                font-size: 40px;
+                color: rgb(225, 220, 220);
+                cursor: pointer;
+            }
             @include lg {
                 position: absolute;
                 font-size: 50px;
@@ -59,85 +76,130 @@
             }
         }
         .gift {
-            // position: absolute;
-            // top: 30%;
-            // left: 60%;
-            // transform: translate(-50%, -50%);
-            // border-radius: 20px;
-            // background-color: #e1b12c;
-            // padding: 20px;
             @include xs {
                 position: absolute;
-                top: 25%;
+                top: 30%;
                 left: 50%;
                 transform: translate(-50%, -50%);
                 border-radius: 10px;
                 background-color: #e1b12c;
                 width: fit-content;
                 text-align: center;
-                padding: 20px;
+                padding: 10px;
+            }
+            @include sm {
+                position: absolute;
+                top: 30%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                border-radius: 10px;
+                background-color: #e1b12c;
+                width: fit-content;
+                text-align: center;
+                padding: 10px;
+            }
+            @include lg {
+                position: absolute;
+                top: 40%;
+                left: 60%;
+                transform: translate(-50%, -50%);
+                border-radius: 20px;
+                background-color: #e1b12c;
+                padding: 10px 15px;
             }
             p {
-                // color: white;
-                // font-size: 25px;
-                // margin-bottom: 10px;
+                color: white;
+                text-align: center;
                 @include xs {
-                    color: white;
+                }
+                @include sm {
+                    font-size: 18px;
+                }
+                @include lg {
+                    font-size: 25px;
+                    margin-bottom: 10px;
                 }
             }
             span {
-                // color: blue;
-                // font-size: 20px;
-                // text-transform: uppercase;
+                color: blue;
+                text-transform: capitalize;
                 @include xs {
-                    color: blue;
-                    text-transform: capitalize;
+                }
+                @include sm {
+                }
+                @include lg {
+                    font-size: 20px;
                 }
             }
         }
         .info {
-            p {
+            .text {
+                color: #e67e22;
+                text-transform: capitalize;
+                margin-bottom: 10px;
+                text-align: center;
                 @include xs {
-                    color: #e67e22;
-                    text-transform: capitalize;
-                    margin-bottom: 10px;
-                    text-align: center;
+                }
+                @include sm {
+                }
+                @include lg {
+                    font-size: 18px;
                 }
             }
-            // position: absolute;
-            // top: 70%;
-            // left: 60%;
-            // transform: translate(-50%, -50%);
+
             @include xs {
                 position: absolute;
                 top: 60%;
                 left: 50%;
                 transform: translate(-50%, -50%);
             }
+            @include sm {
+                position: absolute;
+                top: 60%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+            }
+            @include lg {
+                position: absolute;
+                top: 70%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+            }
         }
         .call {
-            // position: absolute;
-            // top: 50%;
-            // left: 50%;
-            // transform: translate(-50%, -50%);
             @include xs {
+                position: absolute;
+                top: 90%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                text-align: center;
+            }
+            @include sm {
                 position: absolute;
                 top: 88%;
                 left: 50%;
                 transform: translate(-50%, -50%);
                 text-align: center;
             }
-
+            @include lg {
+                position: absolute;
+                top: 90%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+            }
             p {
-                // text-transform: capitalize;
-                // font-size: 18px;
-                // color: #e1b12c;
-                // animation: text 2s forwards infinite ease;
+                text-transform: capitalize;
+                color: #e1b12c;
+                animation: text 2s forwards infinite ease;
+                text-align: center;
                 @include xs {
-                    text-transform: capitalize;
+                    font-size: 12px;
+                }
+                @include sm {
                     font-size: 14px;
-                    color: #e1b12c;
-                    animation: text 2s forwards infinite ease;
+                }
+                @include lg {
+                    font-size: 18px;
                 }
             }
         }

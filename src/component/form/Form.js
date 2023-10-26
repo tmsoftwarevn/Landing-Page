@@ -17,7 +17,7 @@ const FormUser = () => {
     <div className="form">
       <input
         placeholder="Họ và tên"
-        className="name"
+        className="field"
         ref={refName}
         onChange={(e) => {
           handleSetName(e);
@@ -27,7 +27,7 @@ const FormUser = () => {
 
       <input
         placeholder="Số điện thoại"
-        className="phone"
+        className="field"
         ref={refPhone}
         onChange={(e) => {
           handleSetPhone(e);

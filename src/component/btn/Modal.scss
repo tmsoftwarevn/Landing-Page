@@ -10,6 +10,10 @@
     .anh-modal {
         @include xs {
             width: 80vw;
+            height: 80vh;
+        }
+        @include sm {
+            width: 80vw;
             height: 100%;
         }
         @include lg {
@@ -19,35 +23,46 @@
     }
 
     .vongquay-modal {
-        // position: absolute;
-        // right: 10%;
-        // top: 15%;
+        position: absolute;
+        display: flex;
+        align-items: center;
+        justify-content: center;
         @include xs {
-            position: absolute;
-            display: flex;
-            align-items: center;
-            justify-content: center;
+            //margin-left: 50%;
+        }
+        @include sm {
             margin-left: 50%;
         }
+        @include lg {
+            right: 10%;
+            top: 15%;
+        }
         #arrow-modal {
-            // position: absolute;
-            // top: 15.25%;
-            // right: 26.25%;
-            // z-index: 1;
-            // border-top: 40px solid #a73b96;
-            // border-left: 20px solid transparent;
-            // border-right: 20px solid transparent;
+            position: absolute;
+            top: 1%;
+            z-index: 1;
             @include xs {
-                position: absolute;
-                top: 1%;
-                z-index: 1;
                 border-top: 30px solid #a73b96;
                 border-left: 15px solid transparent;
                 border-right: 15px solid transparent;
             }
+            @include sm {
+                border-top: 40px solid #a73b96;
+                border-left: 20px solid transparent;
+                border-right: 20px solid transparent;
+            }
+            @include lg {
+                border-top: 40px solid #a73b96;
+                border-left: 20px solid transparent;
+                border-right: 20px solid transparent;
+            }
         }
         .anh-vongquay-modal {
             @include xs {
+                width: 90%;
+                height: 100%;
+            }
+            @include sm {
                 width: 80%;
                 height: 50%;
             }
@@ -57,36 +72,54 @@
             }
         }
         .btXoay {
-            // position: absolute;
-            // width: 150px;
-            // text-align: center;
-            // left: 27%;
-            // padding: 10px 20px;
-            // background-color: #fd79a8;
-            // color: white;
-            // border: none;
-            // cursor: pointer;
-            // border-radius: 5px;
-            // font-size: 20px;
+            position: absolute;
+            text-align: center;
+            background-color: #fd79a8;
+            color: white;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
             @include xs {
-                position: absolute;
-                text-align: center;
-                background-color: #fd79a8;
-                color: white;
-                border: none;
-                cursor: pointer;
-                border-radius: 5px;
-                padding: 1%;
+                padding: 3%;
                 bottom: -20%;
+
+                &:hover {
+                    background-color: #e419c6;
+                }
+            }
+            @include sm {
+                padding: 2%;
+                bottom: -15%;
+                &:hover {
+                    background-color: #e419c6;
+                }
+            }
+            @include lg {
+                padding: 10px 20px;
+                font-size: 20px;
+                bottom: -15%;
+                &:hover {
+                    background-color: #e419c6;
+                }
             }
         }
     }
     .btn-cancel {
-        position: absolute;
-        font-size: 40px;
-        top: 5px;
-        right: 4px;
-        color: rgb(225, 220, 220);
-        cursor: pointer;
+        @include xs {
+            position: absolute;
+            font-size: 20px;
+            top: 5px;
+            right: 4px;
+            color: rgb(225, 220, 220);
+            cursor: pointer;
+        }
+        @include sm {
+            position: absolute;
+            font-size: 40px;
+            top: 5px;
+            right: 4px;
+            color: rgb(225, 220, 220);
+            cursor: pointer;
+        }
     }
 }

@@ -94,8 +94,7 @@ const Modal = (props) => {
         <img
           src={p2}
           alt="anh"
-          // width={"800px"}
-          // height={"450px"}
+          
           className="anh-modal"
         />
 
@@ -104,8 +103,7 @@ const Modal = (props) => {
           <img
             src={vongquay}
             alt="vong quay"
-            // width={"300px"}
-            // height={"300px"}
+            
             ref={wheelRef}
             className="anh-vongquay-modal"
           />

@@ -35,13 +35,13 @@ const Result = (props) => {
           {/* <span>{result}</span> */}
         </div>
         <div className="info">
-          <p>Để lại thông tin nhận ngay quà xịn</p>
+          <p className="text">Để lại thông tin nhận ngay quà xịn</p>
           <FormUser />
         </div>
         <div className="call">
           <p>
             bên cửa hàng sẽ gọi xác nhận thông tin. chị nhớ nghe máy để nhận ưu
-            đãi nhé
+            đãi nhé !
           </p>
           {/* <p>chị nhớ nghe máy để nhận ưu đãi nhé</p> */}
         </div>
