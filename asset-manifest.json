@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/Landing-Page/static/css/main.67d1d30b.css",
+    "main.js": "/Landing-Page/static/js/main.fd99b8a6.js",
+    "static/js/787.174a0e6e.chunk.js": "/Landing-Page/static/js/787.174a0e6e.chunk.js",
+    "static/media/p6.png": "/Landing-Page/static/media/p6.327df9d4b288137a7e82.png",
+    "static/media/p5.jpg": "/Landing-Page/static/media/p5.513a7b3b8700b9878459.jpg",
+    "static/media/vongquay.png": "/Landing-Page/static/media/vongquay.2c953d365cbbe47f52f6.png",
+    "static/media/p3.jpg": "/Landing-Page/static/media/p3.50d65cc575641407417d.jpg",
+    "static/media/p7.jpg": "/Landing-Page/static/media/p7.2b1d1cf7257ba7d3ecef.jpg",
+    "static/media/p1.jpg": "/Landing-Page/static/media/p1.712a5fcd097a094cb27b.jpg",
+    "static/media/p4.jpg": "/Landing-Page/static/media/p4.af78e6e283851aed02c1.jpg",
+    "static/media/p8.jpg": "/Landing-Page/static/media/p8.c57941245e46ed5e427e.jpg",
+    "static/media/p2.jpg": "/Landing-Page/static/media/p2.4b01994e955f89ee5cc8.jpg",
+    "static/media/ketqua.jpg": "/Landing-Page/static/media/ketqua.8e5722fc724d35d221f6.jpg",
+    "index.html": "/Landing-Page/index.html",
+    "main.67d1d30b.css.map": "/Landing-Page/static/css/main.67d1d30b.css.map",
+    "main.fd99b8a6.js.map": "/Landing-Page/static/js/main.fd99b8a6.js.map",
+    "787.174a0e6e.chunk.js.map": "/Landing-Page/static/js/787.174a0e6e.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.67d1d30b.css",
+    "static/js/main.fd99b8a6.js"
+  ]
+}
