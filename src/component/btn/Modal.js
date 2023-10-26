@@ -3,6 +3,7 @@ import p2 from "../../image/p2.jpg";
 import vongquay from "../../image/vongquay.png";
 import "./Modal.scss";
 import { MdOutlineCancel } from "react-icons/md";
+import quayngay from "../../image/quay_ngay.png";
 const Modal = (props) => {
   const { handleQuay, getResult, resetModalWheel, handleSetModalButton } =
     props;
@@ -91,26 +92,20 @@ const Modal = (props) => {
   return (
     <>
       <div className="modal-quay" ref={refOutside}>
-        <img
-          src={p2}
-          alt="anh"
-          
-          className="anh-modal"
-        />
+        <img src={p2} alt="anh" className="anh-modal" />
 
         <div className="vongquay-modal">
           <div id="arrow-modal"></div>
           <img
             src={vongquay}
             alt="vong quay"
-            
             ref={wheelRef}
             className="anh-vongquay-modal"
           />
 
           <div style={{ height: "10px" }}></div>
           <div className="btXoay" onClick={() => spinWheel()}>
-            Quay
+            <img src={quayngay} alt="btn-quay" className="anh_btn-quay" />
           </div>
         </div>
         <div

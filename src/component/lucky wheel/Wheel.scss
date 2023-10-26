@@ -68,43 +68,51 @@
                 margin-right: 20%;
             }
             @include sm {
-                width: 80%;
+                width: 95%;
                 height: 50%;
             }
             @include lg {
-                width: 350px;
-                height: 350px;
+                // width: 350px;
+                // height: 350px;
+                width: 80%;
+                //height: 50%;
             }
         }
         .btXoay {
             position: absolute;
             text-align: center;
-            background-color: #fd79a8;
-            color: white;
-            border: none;
             cursor: pointer;
-            border-radius: 5px;
             @include xs {
-                padding: 2%;
-                bottom: -10%;
                 margin-right: 20%;
-                &:hover {
-                    background-color: #e419c6;
-                }
             }
             @include sm {
-                padding: 2%;
-                bottom: -15%;
-                &:hover {
-                    background-color: #e419c6;
-                }
             }
             @include lg {
-                padding: 10px 20px;
-                font-size: 20px;
-                bottom: -15%;
-                &:hover {
-                    background-color: #e419c6;
+            }
+            .anh_btn-quay {
+                @include xs {
+                    height: 30px;
+                    width: 30px;
+                    &:hover {
+                        transform: scale(1.5);
+                        transition: 0.5s;
+                    }
+                }
+                @include sm {
+                    height: 40px;
+                    width: 40px;
+                    &:hover {
+                        transform: scale(1.5);
+                        transition: 0.5s;
+                    }
+                }
+                @include lg {
+                    height: 50px;
+                    width: 50px;
+                    &:hover {
+                        transform: scale(1.5);
+                        transition: 0.5s;
+                    }
                 }
             }
         }

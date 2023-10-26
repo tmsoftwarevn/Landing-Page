@@ -1,6 +1,7 @@
 import { useRef, useState } from "react";
 import p2 from "../../image/p2.jpg";
 import vongquay from "../../image/vongquay.png";
+import quayngay from "../../image/quay_ngay.png";
 import "./Wheel.scss";
 const Wheel = (props) => {
   const { handleQuay, getResult } = props;
@@ -75,24 +76,19 @@ const Wheel = (props) => {
   return (
     <>
       <div className="vongquay-container">
-        <img
-          src={p2}
-          alt="anh"
-          className="anh_2"
-        />
+        <img src={p2} alt="anh" className="anh_2" />
 
         <div className="vongquay">
           <div id="arrow"></div>
           <img
             src={vongquay}
             alt="vong quay"
-            
             ref={wheelRef}
             className="anh_vongquay"
           />
           <div style={{ height: "10px" }}></div>
           <div className="btXoay" onClick={() => spinWheel()}>
-            Quay
+            <img src={quayngay} alt="btn-quay" className="anh_btn-quay" />
           </div>
         </div>
       </div>
