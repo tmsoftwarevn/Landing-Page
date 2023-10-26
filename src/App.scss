@@ -98,26 +98,25 @@
   .form {
     position: relative;
     .info {
+      position: absolute;
       @include xs {
-        position: absolute;
         right: 10%;
         top: 53%;
         width: 30%;
       }
       @include sm {
-        position: absolute;
         right: 10%;
         top: 53%;
         width: 30%;
       }
       @include lg {
-        position: absolute;
-        margin-left: 400px;
-        margin-top: 200px;
+        top: 65%;
+        left: 70%;
+        transform: translate(-50%, -50%);
+        width: 25%;
       }
     }
     .btn-info {
-      margin-left: 50px;
     }
   }
 }
