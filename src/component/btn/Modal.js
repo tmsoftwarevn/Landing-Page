@@ -101,6 +101,7 @@ const Modal = (props) => {
             alt="vong quay"
             ref={wheelRef}
             className="anh-vongquay-modal"
+            //className={}
           />
 
           <div style={{ height: "10px" }}></div>

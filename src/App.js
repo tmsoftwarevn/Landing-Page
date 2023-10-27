@@ -31,6 +31,9 @@ const App = () => {
   const hanleOffModalButton = () => {
     refModalButton.current.offModalButton(); // ẩn modal click button
   };
+  useEffect(() => {
+    hanleOffModalButton();
+  }, [isModal]);
   return (
     <>
       <div

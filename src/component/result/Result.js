@@ -35,7 +35,7 @@ const Result = (props) => {
           {/* <span>{result}</span> */}
         </div>
         <div className="info">
-          <p className="text">Để lại thông tin nhận ngay quà xịn</p>
+          {/* <p className="text">Để lại thông tin nhận ngay quà xịn</p> */}
           <FormUser />
         </div>
         <div className="call">

@@ -1,7 +1,8 @@
 @import '../css/media.scss';
 @import '../css/reset.scss';
-
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500&display=swap');
 .form {
+    font-family: 'Roboto';
     @include xs {
         width: 100%;
     }
@@ -13,25 +14,29 @@
     }
     .field {
         display: block;
-        width: 100%;
         border-radius: 2px;
+        font-family: 'Roboto';
         @include xs {
             padding: 2%;
             margin-bottom: 5px;
+            //width: 200px;
+            width: 100%;
         }
         @include sm {
-            padding: 2%;
+            padding: 4%;
             margin-bottom: 5px;
+            //width: 250px;
         }
+
         @include lg {
-            padding: 2%;
+            padding: 4%;
             margin-bottom: 5px;
-            max-width: 260px;
+            width: 260px;
         }
     }
 
     .btn-ok {
-        border-radius: 5px;
+        border-radius: 3px;
         color: white;
         background-color: #e1b12c;
         width: fit-content;
@@ -41,15 +46,15 @@
         }
         @include xs {
             margin-top: 3%;
-            padding: 2%;
+            padding: 2% 5%;
         }
         @include sm {
             margin-top: 1%;
-            padding: 2%;
+            padding: 2% 5%;
         }
         @include lg {
             margin-top: 3%;
-            padding: 3%;
+            padding: 3% 5%;
         }
     }
 }

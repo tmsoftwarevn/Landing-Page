@@ -4,6 +4,7 @@
 .container {
   position: relative;
   z-index: 1;
+  overflow: hidden;
   .p {
     display: flex;
     align-items: center;
@@ -111,9 +112,12 @@
       }
       @include lg {
         top: 65%;
-        left: 70%;
+        left: 73%;
         transform: translate(-50%, -50%);
-        width: 25%;
+        max-width: 260px;
+      }
+      @include xl {
+        transform: translate(-80%, -50%);
       }
     }
     .btn-info {

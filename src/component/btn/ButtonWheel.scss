@@ -21,6 +21,7 @@
         border-radius: 50%;
         cursor: pointer;
         animation: ring 3s 1s ease-in-out infinite;
+
         @include xs {
             bottom: 5px;
             right: 5px;

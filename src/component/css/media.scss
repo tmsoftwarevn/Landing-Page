@@ -2,7 +2,12 @@
     @media (max-width: 576px) {
         @content;
     }
+    // /* Landscape */
+    // @media screen and (orientation: landscape/ portrait) {
+    //     /* Landscape styles here */
+    // }
 }
+
 @mixin sm {
     @media (min-width: 577px) {
         @content;
