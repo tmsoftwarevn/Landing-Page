@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState } from "react";
-import p2 from "../../image/p2.jpg";
+import bgvongquay from "../../image/ketquache.jpg";
 import vongquay from "../../image/vongquay.png";
+import logoden from "../../image/Che Ngon 3N logo-den.png";
 import "./Modal.scss";
 import { MdOutlineCancel } from "react-icons/md";
 import quayngay from "../../image/quay_ngay.png";
@@ -92,8 +93,13 @@ const Modal = (props) => {
   return (
     <>
       <div className="modal-quay" ref={refOutside}>
-        <img src={p2} alt="anh" className="anh-modal" />
-
+        <img src={bgvongquay} alt="anh" className="anh-modal" />
+        <img
+          src={logoden}
+          alt="logo"
+          className="logo-modal"
+          onClick={() => window.open("https://chengon3n.com/", "_blank")}
+        />
         <div className="vongquay-modal">
           <div id="arrow-modal"></div>
           <img
@@ -101,7 +107,6 @@ const Modal = (props) => {
             alt="vong quay"
             ref={wheelRef}
             className="anh-vongquay-modal"
-            //className={}
           />
 
           <div style={{ height: "10px" }}></div>

@@ -7,6 +7,25 @@
     align-items: center;
     justify-content: center;
 
+    .logo-modal {
+        position: absolute;
+        cursor: pointer;
+        @include xs {
+            width: 15%;
+            top: 10px;
+            left: 10px;
+        }
+        @include sm {
+            width: 15%;
+            top: 10px;
+            left: 10px;
+        }
+        @include xl {
+            width: 200px;
+            top: 0;
+            left: 0;
+        }
+    }
     .anh-modal {
         @include xs {
             width: 80vw;
@@ -136,12 +155,15 @@
         }
     }
     .btn-cancel {
+        color: rgb(232, 229, 229);
         @include xs {
             position: absolute;
             font-size: 20px;
             top: 5px;
             right: 4px;
-            color: rgb(225, 220, 220);
+            &:hover {
+                color: rgb(244, 75, 103);
+            }
             cursor: pointer;
         }
         @include sm {
@@ -149,8 +171,10 @@
             font-size: 40px;
             top: 5px;
             right: 4px;
-            color: rgb(225, 220, 220);
             cursor: pointer;
+            &:hover {
+                color: rgb(244, 75, 103);
+            }
         }
     }
 }

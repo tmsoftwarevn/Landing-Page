@@ -1,7 +1,7 @@
 import "./Result.scss";
 import FormUser from "../form/Form";
-import { useEffect, useState } from "react";
-import gift from "../../image/ketqua.jpg";
+import logoden from "../../image/Che Ngon 3N logo-den.png";
+import bgketqua from "../../image/ketquache.jpg";
 import { MdOutlineCancel } from "react-icons/md";
 const Result = (props) => {
   const { handleQuay, result, hanleOffModalButton, handleSetModalButton } =
@@ -11,12 +11,12 @@ const Result = (props) => {
     <div className="modal">
       <div className="blur"></div>
       <div className="content">
+        <img src={bgketqua} alt="anh" className="anh-ketqua" />
         <img
-          src={gift}
-          alt="anh"
-          // width={"836px"}
-          // height={"490px"}
-          className="anh-ketqua"
+          src={logoden}
+          alt="logo"
+          className="logo"
+          onClick={() => window.open("https://chengon3n.com/", "_blank")}
         />
         <div
           className="btn-cancel"

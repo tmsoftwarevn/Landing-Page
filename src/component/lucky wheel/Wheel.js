@@ -1,5 +1,8 @@
 import { useRef, useState } from "react";
 import p2 from "../../image/p2.jpg";
+import bgvongquay from "../../image/ketquache.jpg";
+import logoden from "../../image/Che Ngon 3N logo-den.png";
+import logotrang from "../../image/Che Ngon 3N logo-trang.png";
 import vongquay from "../../image/vongquay.png";
 import quayngay from "../../image/quay_ngay.png";
 import "./Wheel.scss";
@@ -76,7 +79,13 @@ const Wheel = (props) => {
   return (
     <>
       <div className="vongquay-container">
-        <img src={p2} alt="anh" className="anh_2" />
+        <img src={bgvongquay} alt="anh" className="anh_2" />
+        <img
+          src={logoden}
+          alt="anh logo"
+          className="logo"
+          onClick={() => window.open("https://chengon3n.com/", "_blank")}
+        />
 
         <div className="vongquay">
           <div id="arrow"></div>

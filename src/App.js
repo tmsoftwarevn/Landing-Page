@@ -1,13 +1,12 @@
 import React, { useEffect, useRef, useState } from "react";
 import "./App.scss";
 import p1 from "./image/p1.jpg";
-import p2 from "./image/p2.jpg";
 import p3 from "./image/p3.jpg";
-import p4 from "./image/p4.jpg";
 import p5 from "./image/p5.jpg";
 import p6 from "./image/p6.png";
 import p7 from "./image/p7.jpg";
 import p8 from "./image/p8.jpg";
+import baner from "./image/banner.jpg";
 
 import Wheel from "./component/lucky wheel/Wheel";
 import Result from "./component/result/Result";
@@ -45,7 +44,7 @@ const App = () => {
         }
       >
         <div className="p">
-          <img src={p1} alt="anh" className="anh_1" />
+          <img src={baner} alt="anh" className="anh_1" />
         </div>
 
         <div>

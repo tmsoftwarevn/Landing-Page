@@ -68,6 +68,27 @@
             width: 55%;
             height: 63%;
         }
+        .logo {
+            cursor: pointer;
+            @include xs {
+                position: absolute;
+                top: 10px;
+                left: 10px;
+                width: 15%;
+            }
+            @include sm {
+                position: absolute;
+                top: 10px;
+                left: 10px;
+                width: 15%;
+            }
+            @include xl {
+                position: absolute;
+                top: 10px;
+                left: 10px;
+                width: 20%;
+            }
+        }
         .anh-ketqua {
             @include xs {
                 width: 100%;
@@ -87,12 +108,15 @@
             }
         }
         .btn-cancel {
+            color: rgb(232, 229, 229);
             @include xs {
                 position: absolute;
                 top: 5px;
                 right: 1px;
                 font-size: 40px;
-                color: rgb(225, 220, 220);
+                &:hover {
+                    color: rgb(244, 75, 103);
+                }
                 cursor: pointer;
             }
             @include sm {
@@ -100,7 +124,9 @@
                 top: 5px;
                 right: 1px;
                 font-size: 40px;
-                color: rgb(225, 220, 220);
+                &:hover {
+                    color: rgb(244, 75, 103);
+                }
                 cursor: pointer;
             }
             @include lg {
@@ -108,7 +134,9 @@
                 font-size: 50px;
                 top: 10px;
                 right: 4px;
-                color: rgb(225, 220, 220);
+                &:hover {
+                    color: rgb(244, 75, 103);
+                }
                 cursor: pointer;
             }
         }
@@ -121,7 +149,7 @@
                 top: 30%;
                 left: 50%;
                 transform: translate(-50%, -50%);
-                padding: 10px 30px;
+                padding: 10px 20px;
                 width: 60%;
             }
             @include sm {
@@ -131,20 +159,26 @@
                 transform: translate(-50%, -50%);
                 padding: 10px 40px;
             }
-
+            @include md {
+                position: absolute;
+                top: 30%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                padding: 10px 60px;
+            }
             @include lg {
                 position: absolute;
-                top: 40%;
-                left: 60%;
+                top: 30%;
+                left: 50%;
                 transform: translate(-50%, -50%);
-                padding: 10px 30px;
+                padding: 10px 40px;
             }
             @include xl {
                 position: absolute;
-                top: 40%;
-                left: 60%;
+                top: 30%;
+                left: 50%;
                 transform: translate(-50%, -50%);
-                padding: 10px 30px;
+                padding: 10px 60px;
             }
             p {
                 color: #feca57;
@@ -202,13 +236,13 @@
             }
             @include lg {
                 position: absolute;
-                top: 70%;
+                top: 65%;
                 left: 50%;
                 transform: translate(-50%, -50%);
             }
             @include xl {
                 position: absolute;
-                top: 68%;
+                top: 60%;
                 left: 50%;
                 transform: translate(-50%, -50%);
             }
@@ -242,7 +276,7 @@
             }
             p {
                 text-transform: capitalize;
-                color: #e45eb1;
+                color: #000000;
                 animation: text 2s forwards infinite ease;
                 text-align: center;
                 //z-index: 5;
