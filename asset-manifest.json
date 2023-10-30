@@ -1,12 +1,13 @@
 {
   "files": {
-    "main.css": "/Landing-Page/static/css/main.daed40fa.css",
-    "main.js": "/Landing-Page/static/js/main.2bd69baf.js",
+    "main.css": "/Landing-Page/static/css/main.e258b7de.css",
+    "main.js": "/Landing-Page/static/js/main.26596a63.js",
     "static/js/787.174a0e6e.chunk.js": "/Landing-Page/static/js/787.174a0e6e.chunk.js",
     "static/media/Che Ngon 3N logo-den.png": "/Landing-Page/static/media/Che Ngon 3N logo-den.ed9983bf74e7636c9014.png",
     "static/media/p6.png": "/Landing-Page/static/media/p6.327df9d4b288137a7e82.png",
     "static/media/ketquache.jpg": "/Landing-Page/static/media/ketquache.086348f27294d1c66ae2.jpg",
     "static/media/Che Ngon 3N logo-trang.png": "/Landing-Page/static/media/Che Ngon 3N logo-trang.e4421e6d3b1fb319d10a.png",
+    "static/media/jpg": "/Landing-Page/static/media/3cfa0bc2484c9f12c65d.abbb8ae071b208da8003.jpg",
     "static/media/p5.jpg": "/Landing-Page/static/media/p5.513a7b3b8700b9878459.jpg",
     "static/media/banner.jpg": "/Landing-Page/static/media/banner.ae5fde22ef90d5c21d2a.jpg",
     "static/media/vongquay.png": "/Landing-Page/static/media/vongquay.2c953d365cbbe47f52f6.png",
@@ -17,12 +18,12 @@
     "static/media/p2.jpg": "/Landing-Page/static/media/p2.4b01994e955f89ee5cc8.jpg",
     "static/media/quay_ngay.png": "/Landing-Page/static/media/quay_ngay.de9815ffe434d0f959b6.png",
     "index.html": "/Landing-Page/index.html",
-    "main.daed40fa.css.map": "/Landing-Page/static/css/main.daed40fa.css.map",
-    "main.2bd69baf.js.map": "/Landing-Page/static/js/main.2bd69baf.js.map",
+    "main.e258b7de.css.map": "/Landing-Page/static/css/main.e258b7de.css.map",
+    "main.26596a63.js.map": "/Landing-Page/static/js/main.26596a63.js.map",
     "787.174a0e6e.chunk.js.map": "/Landing-Page/static/js/787.174a0e6e.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.daed40fa.css",
-    "static/js/main.2bd69baf.js"
+    "static/css/main.e258b7de.css",
+    "static/js/main.26596a63.js"
   ]
 }
