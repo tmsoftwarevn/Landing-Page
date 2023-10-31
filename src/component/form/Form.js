@@ -70,10 +70,10 @@ const FormUser = (props) => {
     }
 
     if (name && phone) {
-      callAPI();
-      // setModalFinalResult(true);
-      // handleSetModalButton(true);
-      // handleQuay(false);
+      //callAPI();
+      setModalFinalResult(true);
+      handleSetModalButton(true);
+      handleQuay(false);
     }
   };
 
