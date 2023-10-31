@@ -12,7 +12,7 @@ const InfoResult = (props) => {
             Đây là phần thưởng của bạn: <span>{result}</span>
           </p>
           <p style={{ marginTop: "20px" }}>
-            Chúc bạn có những giây phút vui vẻ tại chè ngon!
+            Chúc bạn có những giây phút vui vẻ tại chè ngon3N!
           </p>
           <div
             className="btn-off"
