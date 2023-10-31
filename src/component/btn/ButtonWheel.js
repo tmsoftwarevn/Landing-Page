@@ -1,17 +1,11 @@
-import {
-  forwardRef,
-  useEffect,
-  useImperativeHandle,
-  useRef,
-  useState,
-} from "react";
+import { forwardRef, useImperativeHandle, useState } from "react";
 import "./ButtonWheel.scss";
-import Wheel from "../lucky wheel/Wheel";
+
 import Modal from "./Modal";
-import anhbutton from "../../image/vongquay.png";
+import anhbutton from "../../image/VongQuay Khai Truong Che Ngon 3N-08.png";
 const ButtonWheel = forwardRef((props, ref) => {
   const [isWheel, setIsWheel] = useState(false);
-  const { handleSetModalButton, getResult, handleQuay } = props;
+  const { handleSetModalButton, getResult, handleQuay, modalFinal } = props;
 
   useImperativeHandle(ref, () => ({
     offModalButton() {
@@ -25,6 +19,7 @@ const ButtonWheel = forwardRef((props, ref) => {
     setIsWheel(false);
   };
   const handleBtn = () => {
+    if (modalFinal) return;
     setModalWheel();
     handleSetModalButton(true);
   };

@@ -68,27 +68,34 @@
         @include sm {
         }
         @include lg {
-            right: 10%;
-            top: 15%;
+            // right: 10%;
+            // top: 15%;
         }
-        #arrow-modal {
-            position: absolute;
-            top: 1%;
-            z-index: 1;
+        .arrow-modal {
             @include xs {
-                border-top: 30px solid #a73b96;
-                border-left: 15px solid transparent;
-                border-right: 15px solid transparent;
+                position: absolute;
+                z-index: 1;
+                top: 0;
+                height: 20%;
             }
             @include sm {
-                border-top: 40px solid #a73b96;
-                border-left: 20px solid transparent;
-                border-right: 20px solid transparent;
+                position: absolute;
+                z-index: 1;
+                top: 0;
+                height: 20%;
+            }
+            @include md {
+                position: absolute;
+                z-index: 1;
+                top: 0;
+                height: 20%;
             }
             @include lg {
-                border-top: 40px solid #a73b96;
-                border-left: 20px solid transparent;
-                border-right: 20px solid transparent;
+                position: absolute;
+                top: 0;
+                z-index: 1;
+                width: 50px;
+                height: 60px;
             }
         }
         .anh-vongquay-modal {
@@ -111,8 +118,8 @@
                 }
             }
             @include lg {
-                width: 300px;
-                height: 300px;
+                width: 320px;
+                height: 320px;
             }
         }
         .btXoay {
@@ -155,15 +162,12 @@
         }
     }
     .btn-cancel {
-        color: rgb(232, 229, 229);
+        color: #333;
         @include xs {
             position: absolute;
             font-size: 20px;
             top: 5px;
             right: 4px;
-            &:hover {
-                color: rgb(244, 75, 103);
-            }
             cursor: pointer;
         }
         @include sm {
@@ -172,9 +176,6 @@
             top: 5px;
             right: 4px;
             cursor: pointer;
-            &:hover {
-                color: rgb(244, 75, 103);
-            }
         }
     }
 }

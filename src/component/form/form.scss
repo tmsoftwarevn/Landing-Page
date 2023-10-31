@@ -38,11 +38,11 @@
     .btn-ok {
         border-radius: 3px;
         color: white;
-        background-color: #e1b12c;
+        background-color: #333;
         width: fit-content;
         cursor: pointer;
         &:hover {
-            background-color: #c59513;
+            background-color: #121212;
         }
         @include xs {
             margin-top: 3%;

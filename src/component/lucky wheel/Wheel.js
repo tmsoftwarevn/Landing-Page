@@ -1,30 +1,36 @@
 import { useRef, useState } from "react";
-import p2 from "../../image/p2.jpg";
 import bgvongquay from "../../image/ketquache.jpg";
 import logoden from "../../image/Che Ngon 3N logo-den.png";
-import logotrang from "../../image/Che Ngon 3N logo-trang.png";
-import vongquay from "../../image/vongquay.png";
+import muiten from "../../image/mui ten.png";
+import vongquay from "../../image/VongQuay Khai Truong Che Ngon 3N-08.png";
 import quayngay from "../../image/quay_ngay.png";
 import "./Wheel.scss";
 const Wheel = (props) => {
   const { handleQuay, getResult } = props;
   const [isSpinning, setSpinning] = useState(false);
   const [result, setResult] = useState(null);
-  const [valueNoiDung, setValueNoiDung] = useState("");
   const wheelRef = useRef(null);
   const [isOpen, setIsOpen] = useState(false);
-  const [isOpenThongBao, setIsThongBao] = useState(false);
 
-  const sliceSize = 360 / 8;
+  // const values = [
+  //   "Truyệt nách Hàn Băng New Elight",
+  //   "Tắm trắng Face Tinh Thể Tuyết",
+  //   "Trị Thâm nách ND-YAD",
+  //   "Gội đầu dưỡng sinh",
+  //   "Cấy trắng Mặt Enzym Pack Hàn Quốc",
+  //   "Se khít làm hồng cô Bé",
+  //   "Điều trị tiền đình vai gáy Trung Hoa - YST",
+  //   "Căng bóng da Baby Face",
+  // ];
   const values = [
-    "Truyệt nách Hàn Băng New Elight",
-    "Tắm trắng Face Tinh Thể Tuyết",
-    "Trị Thâm nách ND-YAD",
-    "Gội đầu dưỡng sinh",
-    "Cấy trắng Mặt Enzym Pack Hàn Quốc",
-    "Se khít làm hồng cô Bé",
-    "Điều trị tiền đình vai gáy Trung Hoa - YST",
-    "Căng bóng da Baby Face",
+    "Chè Bưởi",
+    "Chè Dừa Non hạt Đác",
+    "Chè Khoai Dẻo Đậu Đỏ",
+    "Chè Thập Cẩm Miền Trung",
+    "Chè Sen Long Nhãn",
+    "Chè Hạt Đác Thập Cẩm",
+    "Chè Thái Sầu Riêng",
+    "Chè Khúc Bạch",
   ];
 
   const spinWheel = () => {
@@ -34,12 +40,9 @@ const Wheel = (props) => {
 
     if (cookieValue === null) {
       setSpinning(true);
-
       const fullRots = Math.floor(Math.random() * 5) + 5;
-
       const targetAngle = 225 * fullRots; // Mỗi phần là 360 / 10 = 36 độ
       const initialRotation = Math.random() * 360;
-
       wheelRef.current.style.transition = "none";
       wheelRef.current.style.transform = `rotate(${initialRotation}deg)`;
 
@@ -50,7 +53,8 @@ const Wheel = (props) => {
         }deg)`;
 
         const stopAngle = (initialRotation + targetAngle) % 360;
-        const sliceSize = 360 / 8; // Bánh xe được chia thành 8 phần
+        //const sliceSize = 360 / 8; // Bánh xe được chia thành 8 phần
+        const sliceSize = 360 / 8;
         let stopIndex = Math.floor(stopAngle / sliceSize);
 
         if (stopIndex < 0) {
@@ -65,14 +69,11 @@ const Wheel = (props) => {
           setIsOpen(true);
           setSpinning(false);
           handleQuay(true);
-
-          // localStorage.setItem("TMWheel", "OK");
         }, 6000);
       }, 0);
     } else {
-      // window.location.href = window.location.href;
-      setValueNoiDung("Bạn hết lượt quay");
-      setIsThongBao(true);
+      handleQuay(true);
+      getResult("Bạn hết lượt quay !");
     }
   };
 
@@ -88,14 +89,13 @@ const Wheel = (props) => {
         />
 
         <div className="vongquay">
-          <div id="arrow"></div>
+          <img src={muiten} alt="vong quay" className="arrow" />
           <img
             src={vongquay}
             alt="vong quay"
             ref={wheelRef}
             className="anh_vongquay"
           />
-          <div style={{ height: "10px" }}></div>
           <div className="btXoay" onClick={() => spinWheel()}>
             <img src={quayngay} alt="btn-quay" className="anh_btn-quay" />
           </div>

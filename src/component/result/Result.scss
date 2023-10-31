@@ -56,8 +56,6 @@
             z-index: 10;
             width: 60%;
             height: 60%;
-            // width: 90%;
-            // height: 30%;
         }
         @include xl {
             position: fixed;
@@ -108,15 +106,12 @@
             }
         }
         .btn-cancel {
-            color: rgb(232, 229, 229);
+            color: #333;
             @include xs {
                 position: absolute;
                 top: 5px;
                 right: 1px;
                 font-size: 40px;
-                &:hover {
-                    color: rgb(244, 75, 103);
-                }
                 cursor: pointer;
             }
             @include sm {
@@ -124,9 +119,6 @@
                 top: 5px;
                 right: 1px;
                 font-size: 40px;
-                &:hover {
-                    color: rgb(244, 75, 103);
-                }
                 cursor: pointer;
             }
             @include lg {
@@ -134,10 +126,46 @@
                 font-size: 50px;
                 top: 10px;
                 right: 4px;
-                &:hover {
-                    color: rgb(244, 75, 103);
-                }
                 cursor: pointer;
+            }
+        }
+        .hetluot {
+            border-radius: 7px;
+            background-color: #e45eb1;
+            text-align: center;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            @include xs {
+                padding: 10px 20px;
+                width: 60%;
+            }
+            @include sm {
+                padding: 10px 40px;
+            }
+            @include md {
+                padding: 10px 60px;
+            }
+            @include lg {
+                padding: 10px 40px;
+            }
+            @include xl {
+                padding: 10px 60px;
+            }
+            p {
+                color: #feca57;
+                text-align: center;
+                @include xs {
+                    font-size: 14px;
+                }
+                @include sm {
+                    font-size: 18px;
+                }
+                @include lg {
+                    font-size: 20px;
+                    margin-bottom: 10px;
+                }
             }
         }
         .gift {
@@ -181,7 +209,7 @@
                 padding: 10px 60px;
             }
             p {
-                color: #feca57;
+                color: white;
                 text-align: center;
                 @include xs {
                     font-size: 14px;
@@ -195,7 +223,7 @@
                 }
             }
             span {
-                color: blue;
+                color: #333;
                 text-transform: capitalize;
                 @include xs {
                 }
@@ -207,42 +235,27 @@
             }
         }
         .info {
-            // .text {
-            //     color: #e67e22;
-            //     text-transform: capitalize;
-            //     margin-bottom: 10px;
-            //     text-align: center;
-            //     @include xs {
-            //         display: none;
-            //     }
-            //     @include sm {
-            //     }
-            //     @include lg {
-            //         font-size: 18px;
-            //     }
-            // }
-
             @include xs {
                 position: absolute;
-                top: 65%;
+                top: 75%;
                 left: 50%;
                 transform: translate(-50%, -50%);
             }
             @include sm {
                 position: absolute;
-                top: 60%;
+                top: 75%;
                 left: 50%;
                 transform: translate(-50%, -50%);
             }
             @include lg {
                 position: absolute;
-                top: 65%;
+                top: 75%;
                 left: 50%;
                 transform: translate(-50%, -50%);
             }
             @include xl {
                 position: absolute;
-                top: 60%;
+                top: 70%;
                 left: 50%;
                 transform: translate(-50%, -50%);
             }
@@ -250,36 +263,34 @@
         .call {
             @include xs {
                 position: absolute;
-                top: 90%;
+                top: 55%;
                 left: 50%;
                 transform: translate(-50%, -50%);
                 text-align: center;
             }
             @include sm {
                 position: absolute;
-                top: 88%;
+                top: 55%;
                 left: 50%;
                 transform: translate(-50%, -50%);
                 text-align: center;
             }
             @include lg {
                 position: absolute;
-                top: 93%;
+                top: 50%;
                 left: 50%;
                 transform: translate(-50%, -50%);
             }
             @include xl {
                 position: absolute;
-                top: 90%;
+                top: 50%;
                 left: 50%;
                 transform: translate(-50%, -50%);
             }
             p {
                 text-transform: capitalize;
-                color: #000000;
-                animation: text 2s forwards infinite ease;
+                color: #333;
                 text-align: center;
-                //z-index: 5;
                 @include xs {
                     font-size: 10px;
                 }
@@ -291,13 +302,5 @@
                 }
             }
         }
-    }
-}
-@keyframes text {
-    from {
-        transform: scale(1);
-    }
-    to {
-        transform: scale(1.2);
     }
 }

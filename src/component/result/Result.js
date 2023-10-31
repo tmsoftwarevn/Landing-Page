@@ -4,8 +4,13 @@ import logoden from "../../image/Che Ngon 3N logo-den.png";
 import bgketqua from "../../image/ketquache.jpg";
 import { MdOutlineCancel } from "react-icons/md";
 const Result = (props) => {
-  const { handleQuay, result, hanleOffModalButton, handleSetModalButton } =
-    props;
+  const {
+    handleQuay,
+    result,
+    hanleOffModalButton,
+    handleSetModalButton,
+    setModalFinalResult,
+  } = props;
 
   return (
     <div className="modal">
@@ -28,23 +33,30 @@ const Result = (props) => {
         >
           <MdOutlineCancel />
         </div>
-        <div className="gift">
-          <p>
-            Chúc mừng bạn đã trúng phần quà: <span>{result}</span>
-          </p>
-          {/* <span>{result}</span> */}
-        </div>
-        <div className="info">
-          {/* <p className="text">Để lại thông tin nhận ngay quà xịn</p> */}
-          <FormUser />
-        </div>
-        <div className="call">
-          <p>
-            bên cửa hàng sẽ gọi xác nhận thông tin. chị nhớ nghe máy để nhận ưu
-            đãi nhé !
-          </p>
-          {/* <p>chị nhớ nghe máy để nhận ưu đãi nhé</p> */}
-        </div>
+        {result === "Bạn hết lượt quay !" ? (
+          <div className="hetluot">
+            <p>Bạn hết lượt quay !</p>
+          </div>
+        ) : (
+          <>
+            <div className="gift">
+              <p>
+                Chúc mừng bạn đã trúng phần thưởng: <span>{result}</span>
+              </p>
+            </div>
+            <div className="call">
+              <p>Để lại thông tin nhận ngay quà xịn !</p>
+            </div>
+            <div className="info">
+              <FormUser
+                result={result}
+                setModalFinalResult={setModalFinalResult}
+                handleSetModalButton={handleSetModalButton}
+                handleQuay={handleQuay}
+              />
+            </div>
+          </>
+        )}
       </div>
     </div>
   );

@@ -1,10 +1,11 @@
 import { useEffect, useRef, useState } from "react";
 import bgvongquay from "../../image/ketquache.jpg";
-import vongquay from "../../image/vongquay.png";
+import vongquay from "../../image/VongQuay Khai Truong Che Ngon 3N-08.png";
 import logoden from "../../image/Che Ngon 3N logo-den.png";
 import "./Modal.scss";
 import { MdOutlineCancel } from "react-icons/md";
 import quayngay from "../../image/quay_ngay.png";
+import muiten from "../../image/mui ten.png";
 const Modal = (props) => {
   const { handleQuay, getResult, resetModalWheel, handleSetModalButton } =
     props;
@@ -16,16 +17,15 @@ const Modal = (props) => {
   const [isOpenThongBao, setIsThongBao] = useState(false);
   const refOutside = useRef(null);
 
-  const sliceSize = 360 / 8;
   const values = [
-    "Truyệt nách Hàn Băng New Elight",
-    "Tắm trắng Face Tinh Thể Tuyết",
-    "Trị Thâm nách ND-YAD",
-    "Gội đầu dưỡng sinh",
-    "Cấy trắng Mặt Enzym Pack Hàn Quốc",
-    "Se khít làm hồng cô Bé",
-    "Điều trị tiền đình vai gáy Trung Hoa - YST",
-    "Căng bóng da Baby Face",
+    "Chè Bưởi",
+    "Chè Dừa Non hạt Đác",
+    "Chè Khoai Dẻo Đậu Đỏ",
+    "Chè Thập Cẩm Miền Trung",
+    "Chè Sen Long Nhãn",
+    "Chè Hạt Đác Thập Cẩm",
+    "Chè Thái Sầu Riêng",
+    "Chè Khúc Bạch",
   ];
 
   const spinWheel = () => {
@@ -71,9 +71,8 @@ const Modal = (props) => {
         }, 6000);
       }, 0);
     } else {
-      // window.location.href = window.location.href;
-      setValueNoiDung("Bạn hết lượt quay");
-      setIsThongBao(true);
+      handleQuay(true);
+      getResult("Bạn hết lượt quay !");
     }
   };
   useEffect(() => {
@@ -101,7 +100,7 @@ const Modal = (props) => {
           onClick={() => window.open("https://chengon3n.com/", "_blank")}
         />
         <div className="vongquay-modal">
-          <div id="arrow-modal"></div>
+          <img src={muiten} alt="anh" className="arrow-modal" />
           <img
             src={vongquay}
             alt="vong quay"
